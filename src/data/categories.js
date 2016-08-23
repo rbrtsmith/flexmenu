@@ -12,7 +12,7 @@ const categories = [
     color: '#8CE'
   },
   {
-    text: 'iPlayer',
+    text: 'jPlayer',
     color: '#ed3d7d'
   },
   {
@@ -24,11 +24,11 @@ const categories = [
     color: 'default'
   },
   {
-    text: 'CBBC',
+    text: 'CBBB',
     color: 'default'
   },
   {
-    text: 'CBeebies',
+    text: 'BBeebies',
     color: 'default'
   },
   {
@@ -36,7 +36,7 @@ const categories = [
     color: 'default'
   },
   {
-    text: 'iWonder',
+    text: 'jWonder',
     color: 'default'
   },
   {

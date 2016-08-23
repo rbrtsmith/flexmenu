@@ -1,6 +1,6 @@
 .c-collapsed-nav {
   overflow: hidden;
-  transition: height 0.3s;
+  transition: height .2s;
   &.is-open {
     border-bottom: 1px solid #ccc;
   }
@@ -162,14 +162,13 @@
   background: transparent;
   font-weight: bold;
 
-  @include respond-to('sm') {
-    padding: 10px;
+  @media(min-width: 300px) {
     &::before,
     &::after {
       position: absolute;
       right: 0;
       bottom: 0;
-      left: -150px;
+      left: -80px;
       content: ' ';
     }
 
@@ -186,6 +185,17 @@
     &:hover::after {
       opacity: 1;
     }
+  }
+
+  @media (min-width: 350px) {
+    &::before,
+    &::after {
+      left: -150px;
+    }
+  }
+
+  @include respond-to('sm') {
+    padding: 10px;
   }
 
 }
