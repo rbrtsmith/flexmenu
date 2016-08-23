@@ -35,6 +35,15 @@ modes as they slow down the compilation process.
 
 ##Testing
 ```
-npm t
+npm test:unit
 ```
-To run the unit tests using Ava.
+Run unit tests with Ava
+```
+npm test:unit:watch
+```
+Run unit tests with Ava and watch for changes
+```
+npm test:coverage
+```
+Run unit tests with code coverage
+
