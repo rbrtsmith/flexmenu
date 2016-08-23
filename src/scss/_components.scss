@@ -1,3 +1,200 @@
-body {
-  background: red !important;
+.c-collapsed-nav {
+  height: 0;
+  overflow: hidden;
+  &.is-open {
+    height: auto;
+    border-bottom: 1px solid #ccc;
+  }
 }
+
+.c-collapsed-nav__inner {
+  margin: $spacing-unit 0;
+  position: relative;
+}
+
+.c-collapsed-nav__item {
+  display: block;
+  color: inherit;
+
+  &:hover {
+    background: #222;
+    color: white;
+  }
+}
+
+.c-collapsed-nav__title {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.c-collapsed-nav__content {
+  @include respond-to('sm') {
+    margin-left: 25%;    
+  }
+}
+
+.c-collapsed-nav__first {
+  @include respond-to('max-sm') {
+    margin-left: 50%;    
+  }
+}
+
+.c-nav-item {
+  display: inline-block;
+  padding: 5px 10px;
+  font-weight: bold;
+  @include respond-to('sm') {
+    padding: 10px;
+  }
+}
+
+.c-nav {
+  height: 33px;
+  overflow: hidden;
+  @include respond-to('sm') {
+    height: 43px;
+  }
+}
+
+.c-search-form {
+  position: relative;
+}
+
+.c-search-form__input {
+  background: #e4e4e4;
+  border: none;
+  height: 24px;
+  padding-left: 5px;
+  &::-webkit-input-placeholder {
+    color: #111;
+    font-weight: bold;
+  }
+  &::-moz-placeholder {
+    color: #111;
+    font-weight: bold;  
+  }
+
+  &:-ms-input-placeholder {  
+    color: #111;
+    font-weight: bold;
+  }
+
+  &:focus {
+    &::-webkit-input-placeholder {
+      color: #888;
+    }
+    &::-moz-placeholder { 
+      color: #888;
+    }
+
+    &:-ms-input-placeholder {  
+      color: #888;
+    }
+  }
+}
+
+.c-search-form__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  padding: 3px;
+  padding-right: 5px;
+  background: transparent;
+}
+
+.c-search-form__submit svg {
+  width: 16px;
+  height: 16px;
+}
+
+.c-visible-navigation {
+  border-bottom: 1px solid #ccc;
+}
+
+
+.c-visible-nav-item {
+  position: relative;
+  z-index: 1;
+  border-left: 1px solid #ccc;
+  background: white;
+  &:last-child {
+    border-right: 1px solid #ccc;
+  }
+}
+
+.c-visible-nav-link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: currentColor;
+    opacity: 0;
+    content: ' ';
+  }
+
+  &:hover {
+    color: inherit;
+
+    &::before {
+      opacity: 1;      
+    }
+  }
+}
+
+.c-menu-button {
+  position: relative;
+  margin-right: 10px;
+  border-right: 1px solid #ccc;
+  padding: 5px 10px;
+  background: transparent;
+  font-weight: bold;
+
+  @include respond-to('sm') {
+    padding: 10px;
+    &::before,
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: -100px;
+      content: ' ';
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      height: 6px;
+      background: currentColor;
+      opacity: 0;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+}
+
+
+.c-burger-icon svg {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.c-site-logo svg {
+  @include respond-to('max-sm') {
+    width: 60px;
+  }
+}
+

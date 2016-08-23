@@ -28,7 +28,7 @@ const Paths = (() => {
   const srcPath = './src';
   return deepFreeze({
     OUT: distPath,
-    JS_ENTRY: `${srcPath}/main.js`,
+    JS_ENTRY: `${srcPath}/app.js`,
     JS_SRC: `${srcPath}/**/*.{js,jsx}`,
     TESTS: `${srcPath}/**/__test__/*.js`,
     HTML_SRC: `${srcPath}/*.html`,
