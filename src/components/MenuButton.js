@@ -4,10 +4,10 @@ import MediaQuery from 'react-responsive';
 import VisibleNavigationItemsContainer from './VisibleNavigationItemsContainer';
 import BurgerIcon from '../icons/BurgerIcon';
 
-const MenuButton = ({ toggleCollapsedNav }) => (
-  <button className="c-menu-button" onClick={toggleCollapsedNav}>
+const MenuButton = ({ toggleCollapsedNav, collapsedNavOpen }) => (
+  <button className={`c-menu-button ${collapsedNavOpen ? 'is-active' : ''}`} onClick={toggleCollapsedNav}>
     <MediaQuery query='(min-device-width: 601px)'>
-      <div>More ▼</div>
+      <div>More { collapsedNavOpen ? '▲' : '▼' }</div>
     </MediaQuery>
     <MediaQuery query='(max-device-width: 600px)'>
       <div className="c-burger-icon">
@@ -18,7 +18,8 @@ const MenuButton = ({ toggleCollapsedNav }) => (
 );
 
 MenuButton.propTypes = {
-  toggleCollapsedNav: PropTypes.func.isRequired
+  toggleCollapsedNav: PropTypes.func.isRequired,
+  collapsedNavOpen: PropTypes.bool.isRequired
 };
 
 export default MenuButton;

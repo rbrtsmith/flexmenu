@@ -28,8 +28,10 @@ class VisibleNavigationItems extends Component {
           {
             this.props.navItems.map((item, i) =>
               <li className="o-inline-list__item c-visible-nav-item" key={i}>
-                <a href="#" className="c-nav-item c-visible-nav-link">
-                  {item.text}
+                <a href="#" className="c-nav-item c-visible-nav-link" style={{color: item.color}}>
+                  <span style={{color: '#222'}}>
+                    {item.text}
+                  </span>
                 </a>
               </li>
             )

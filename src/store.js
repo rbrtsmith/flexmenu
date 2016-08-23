@@ -11,7 +11,8 @@ const navigation = buildNavigation(categories);
 const defaultState = {
   navigation,
   navWrapperWidth: 0,
-  collapsedNavOpen: false
+  collapsedNavOpen: false,
+  collapsedNavHeight: 0
 };
 
 

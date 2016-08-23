@@ -16,3 +16,8 @@ export const setCollapsedItems = payload => ({
 export const toggleCollapsedNav = () => ({
   type: 'TOGGLE_COLLAPSED_NAV'
 });
+
+export const setCollapsedNavHeight = payload => ({
+  type: 'SET_COLLAPSED_NAV_HEIGHT',
+  payload
+});
