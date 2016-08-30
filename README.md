@@ -1,6 +1,9 @@
 # Flex Menu
 A responsive navigation system built in React using Redux.
 
+##Demo
+[http://rbrtsmith.com/flexmenu/dist/](http://rbrtsmith.com/flexmenu/dist/)
+
 ##Getting started
 ```
 npm install
